@@ -1,0 +1,11 @@
+{
+  "name": "react-design-system",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "git@github.com:mariobrusarosco/react-design-system.git",
+  "author": "Mario Brusarosco <mariobrusarosc@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 6006 -c .storybook"
+  }
+}
