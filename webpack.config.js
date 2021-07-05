@@ -6,10 +6,13 @@ module.exports = {
   entry: './src/index.js',
 //   externals: [nodeExternals()],
   output: {
-    filename: 'index.js',
+    filename: 'mariobrusarosco-react-design-system.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'react-design-system',
-    libraryTarget: 'commonjs'
+    library: {
+        root: 'mariobrusarosco-react-design-system',
+        commonjs: 'reactDesignSystem',
+      },
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
