@@ -18,11 +18,12 @@
     "isolatedModules": true,
     // "noEmit": true,
     "jsx": "react",
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true
   },
   "include": [
-    // "src",
-    "index.ts"  
+    "src/**/*"
+    // "index.ts"  
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/*.stories"]
 }
