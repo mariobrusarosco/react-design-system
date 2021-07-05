@@ -1,13 +1,13 @@
 {
   "name": "react-design-system",
-  "version": "0.0.1",
-  "private": false,
+  "author": "Mario Brusarosco <mariobrusarosco@gmail.com>",
+  "version": "0.0.2",
   "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "start": "react-scripts start",
     "build": "webpack --mode production",
     "test": "echo test",
     "storybook": "start-storybook -p 6006 -s public",
