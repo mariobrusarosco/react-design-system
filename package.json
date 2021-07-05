@@ -1,40 +1,47 @@
 {
-  "name": "react-design-system",
-  "version": "2.1.4",
-  "author": "Mario Brusarosco <mariobrusarosco@gmail.com> (http://example.com)",
-  "main": "./dist/walter-white.js",
-  "bin": {
-    "walter-white": "bin/index.js"
-  },
+  "name": "@mariobrusarosco/react-design-system",
+  "author": "Mario Brusarosco <mariobrusarosco@gmail.com>",
+  "version": "0.0.7",
+  "main": "./dist/index.js",
   "files": [
-    "bin",
     "dist"
   ],
-  "module": "./dist/walter-white.js",
   "scripts": {
-    "dev": "webpack --watch --config webpack.config.js",
-    "test": "jest --config jest.config.js",
-    "test:watch": "yarn test -- --watch",
-    "build": " webpack --config webpack.config.js",
-    "eslint": "eslint --cache --fix src/",
+    "start": "react-scripts start",
+    "build": "webpack --mode production",
+    "test": "echo test",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
     "preversion": "yarn eslint && yarn test",
     "version": "yarn build && git add dist",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
-    "eslint": "^5.11.1",
-    "express": "^4.16.4",
-    "jest": "^24.0.0",
-    "jest-cli": "^24.0.0",
-    "nodemon": "^1.18.9",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.0",
-    "webpack-dev-server": "^3.1.14"
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/node-logger": "^6.0.26",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.26",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1",
+    "ts-loader": "^9.2.3",
+    "webpack": "^5.42.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.5.4",
-    "chalk": "^2.4.2",
-    "glob": "^7.1.7",
-    "ramda": "^0.26.1"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "3.4.3",
+    "typescript": "~3.7.2"
   }
 }
