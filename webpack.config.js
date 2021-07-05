@@ -3,8 +3,13 @@ const path = require('path')
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry: './src/index.js',
-//   externals: [nodeExternals()],
+  mode: 'production',
+  entry: ["./index.ts"],
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+    modules: [path.resolve("node_modules"), path.resolve("src")]
+  },
+  externals: [nodeExternals()],
   output: {
     filename: 'mariobrusarosco-react-design-system.js',
     path: path.resolve(__dirname, 'dist'),
@@ -25,12 +30,12 @@ module.exports = {
         test: /\.ts(x)?$/,
         use: "ts-loader",
         exclude: /node_modules/
+      },
+      { 
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader',],
+        include: path.resolve(__dirname, './src')
       }
-    //   { 
-    //     test: /\.scss$/,
-    //     use: ['style-loader', 'css-loader', 'sass-loader'],
-    //     include: path.resolve(__dirname, './src')
-    //   }
     ]
   }
 }

@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "start": "react-scripts start",
-    "build": "webpack --mode production",
+    "build": "webpack",
     "test": "echo test",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
@@ -25,7 +25,9 @@
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.26",
     "babel-loader": "^8.1.0",
+    "css-loader": "^5.2.6",
     "react-is": "^16.13.1",
+    "style-loader": "^3.0.0",
     "ts-loader": "^9.2.3",
     "webpack": "^5.42.1",
     "webpack-cli": "^4.7.2",

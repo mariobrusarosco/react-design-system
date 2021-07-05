@@ -1,3 +1,3 @@
-const me = 'mario'
+export const me = "mario";
 
-export default me
+export default { me };
